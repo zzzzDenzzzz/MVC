@@ -17,3 +17,6 @@ if ($_SERVER["SERVER_NAME"] == "mvc") {
 
     define("ROOT", "https://www.mysyte.com");
 }
+
+define("APP_NAME", "My Website");
+define("DEBUG", true);

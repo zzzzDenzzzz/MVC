@@ -17,7 +17,7 @@ Trait Database
         if ($check) {
             $result = $stm->fetchAll(PDO::FETCH_OBJ);
             if (is_array($result) && count($result)) {
-                return $result[0];
+                return $result;
             }
         }
 
@@ -33,7 +33,7 @@ Trait Database
         if ($check) {
             $result = $stm->fetchAll(PDO::FETCH_OBJ);
             if (is_array($result) && count($result)) {
-                return $result;
+                return $result[0];
             }
         }
 

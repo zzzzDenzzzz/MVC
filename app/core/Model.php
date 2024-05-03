@@ -1,11 +1,20 @@
 <?php
 
-class Model
+Trait Model
 {
     use Database;
-    protected $table = "users";
+
     protected $limit = 10;
     protected $offset = 0;
+    protected $order_type = "DESC";
+    protected $order_column = "id";
+
+    public function findAll()
+    {
+        $query = "SELECT * FROM $this->table ORDER BY $this->order_column $this->order_type LIMIT $this->limit OFFSET $this->offset";
+
+        return $this->query($query);
+    }
 
     public function where($data, $data_not = [])
     {
@@ -22,7 +31,7 @@ class Model
         }
 
         $query = trim($query, " && ");
-        $query .= " LIMIT $this->limit OFFSET $this->offset";
+        $query .= " ORDER BY $this->order_column $this->order_type LIMIT $this->limit OFFSET $this->offset";
         $data = array_merge($data, $data_not);
 
         return $this->query($query, $data);
@@ -56,6 +65,14 @@ class Model
 
     public function insert($data)
     {
+        if (!empty($this->allowedColumns)) {
+            foreach ($data as $key => $value) {
+                if (in_array($key, $this->allowedColumns)) {
+                    unset($data[$key]);
+                }
+            }
+        }
+
         $keys = array_keys($data);
         $query = "INSERT INTO $this->table (" . implode(',', $keys) . ") VALUES (:" . implode(',:', $keys) . ")";
         $this->query($query, $data);
@@ -65,6 +82,14 @@ class Model
 
     public function update($id, $data, $id_column = "id")
     {
+        if (!empty($this->allowedColumns)) {
+            foreach ($data as $key => $value) {
+                if (in_array($key, $this->allowedColumns)) {
+                    unset($data[$key]);
+                }
+            }
+        }
+
         $keys = array_keys($data);
         $query = "UPDATE $this->table SET ";
 
