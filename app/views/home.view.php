@@ -156,8 +156,7 @@ Bootstrap 5 Form Pack Template
 
                     <div class="col-lg-6 col-12 mx-auto">
                         <small>our website is under construction.
-                            <a rel="nofollow" target="_blank"
-                                href="<?=ROOT?>/assets/videos/planet-earth.mp4">Earth
+                            <a rel="nofollow" target="_blank" href="<?= ROOT ?>/assets/videos/planet-earth.mp4">Earth
                                 video</a></small>
                         <!-- please set the date time in the init.js file -->
 
@@ -167,22 +166,22 @@ Bootstrap 5 Form Pack Template
 
                         <ul class="countdown d-flex flex-wrap align-items-center">
                             <li class="countdown-item d-flex flex-column justify-content-center align-items-center">
-                                <h2 class="countdown-title days">14</h2>
+                                <h2 class="countdown-title days">0</h2>
                                 <span class="countdown-text">Days</span>
                             </li>
 
                             <li class="countdown-item d-flex flex-column justify-content-center align-items-center">
-                                <h2 class="countdown-title hours">10</h2>
+                                <h2 class="countdown-title hours">0</h2>
                                 <span class="countdown-text">Hours</span>
                             </li>
 
                             <li class="countdown-item d-flex flex-column justify-content-center align-items-center">
-                                <h2 class="countdown-title minutes">15</h2>
+                                <h2 class="countdown-title minutes">0</h2>
                                 <span class="countdown-text">Minutes</span>
                             </li>
 
                             <li class="countdown-item d-flex flex-column justify-content-center align-items-center">
-                                <h2 class="countdown-title seconds">34</h2>
+                                <h2 class="countdown-title seconds">0</h2>
                                 <span class="countdown-text">Seconds</span>
                             </li>
                         </ul>
@@ -205,7 +204,7 @@ Bootstrap 5 Form Pack Template
     <script src="<?= ROOT ?>/assets/js/bootstrap.bundle.min.js"></script>
     <script src="<?= ROOT ?>/assets/js/countdown.js"></script>
     <script src="<?= ROOT ?>/assets/js/init.js"></script>
-
+    
 </body>
 
 </html>
