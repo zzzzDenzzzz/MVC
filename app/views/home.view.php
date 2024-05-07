@@ -158,7 +158,7 @@ Bootstrap 5 Form Pack Template
                         <small>our website is under construction.
                             <a rel="nofollow" target="_blank"
                                 href="<?=ROOT?>/assets/videos/planet-earth.mp4">Earth
-                                video by Pexels</a></small>
+                                video</a></small>
                         <!-- please set the date time in the init.js file -->
 
                         <h1 class="text-white mt-2 mb-4 pb-2">
