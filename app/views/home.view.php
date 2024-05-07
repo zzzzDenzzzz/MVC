@@ -204,7 +204,7 @@ Bootstrap 5 Form Pack Template
     <script src="<?= ROOT ?>/assets/js/bootstrap.bundle.min.js"></script>
     <script src="<?= ROOT ?>/assets/js/countdown.js"></script>
     <script src="<?= ROOT ?>/assets/js/init.js"></script>
-    
+
 </body>
 
 </html>
