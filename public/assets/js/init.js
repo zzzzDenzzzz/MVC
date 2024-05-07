@@ -3,12 +3,13 @@
 $(document).ready(function () {
   $(".countdown").countdown(
     {
-      date: "12 March 2025 18:30:00",
+      date: "31 May 2024 13:57:00",
       format: "on",
     },
 
     function () {
       // callback function
+      alert("All!");
     }
   );
 });
