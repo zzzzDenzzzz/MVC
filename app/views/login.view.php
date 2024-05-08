@@ -71,7 +71,7 @@
                             <a href="<?= ROOT ?>/register">Create an account</a>
                         </li>
                         <li>
-                            <a href="contact.html">Contact Form</a>
+                            <a href="<?= ROOT ?>/contact">Contact Form</a>
                         </li>
                     </ul>
                 </nav>
