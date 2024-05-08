@@ -103,7 +103,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-12 mx-auto">
-                        <form class="custom-form" role="form" method="post">
+                        <!-- FORM -->
+                        <form class="custom-form" role="form" method="post">    
+                            <?php if (!empty($errors)): ?>
+                                <div class="alert alert-danger">
+                                    <?= implode("<br>", $errors) ?>
+                                </div>
+                            <?php endif; ?>
                             <h2 class="hero-title text-center mb-4 pb-2">Create an account</h2>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -117,7 +123,6 @@
                                     <div class="form-floating mb-4 p-0">
                                         <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*"
                                             class="form-control" placeholder="Email address" required="">
-
                                         <label for="email">Email address</label>
                                     </div>
                                 </div>
@@ -128,8 +133,9 @@
                                         <label for="password">Password</label>
                                     </div>
                                     <div class="form-check mb-4">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-
+                                        <!-- TERMS -->
+                                        <input class="form-check-input" type="checkbox" name="terms" value=""
+                                            id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">
                                             I agree to the Terms of Service and Privacy Policy.
                                         </label>

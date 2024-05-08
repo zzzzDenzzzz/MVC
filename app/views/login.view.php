@@ -103,6 +103,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 col-12 mx-auto">
+                        <!-- FORM -->
                         <form class="custom-form login-form" role="form" method="post">
                             <h2 class="hero-title text-center mb-4 pb-2">Login Form</h2>
                             <div class="form-floating mb-4 p-0">
@@ -117,7 +118,6 @@
                             </div>
                             <div class="form-check mb-4">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Remember me
                                 </label>

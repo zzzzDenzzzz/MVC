@@ -11,3 +11,9 @@ function esc($string)
 {
     return htmlspecialchars($string);
 }
+
+function redirect($path)
+{
+    header("Location: " . ROOT . "/" . $path);
+    die;
+}
