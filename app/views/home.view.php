@@ -68,7 +68,7 @@
                             <a href="<?= ROOT ?>/login">Login Form</a>
                         </li>
                         <li>
-                            <a href="register.html">Create an account</a>
+                            <a href="<?= ROOT ?>/register">Create an account</a>
                         </li>
                         <li>
                             <a href="contact.html">Contact Form</a>
