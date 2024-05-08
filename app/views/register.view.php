@@ -106,7 +106,7 @@
                         <!-- FORM -->
                         <form class="custom-form" role="form" method="post">    
                             <?php if (!empty($errors)): ?>
-                                <div class="alert alert-danger">
+                                <div class="alert alert-danger text-center">
                                     <?= implode("<br>", $errors) ?>
                                 </div>
                             <?php endif; ?>
@@ -115,26 +115,26 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="form-floating">
                                         <input type="text" name="full-name" id="full-name" class="form-control"
-                                            placeholder="Full Name" required="">
+                                            placeholder="Full Name">
                                         <label for="floatingInput">Full Name</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="form-floating mb-4 p-0">
-                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                            class="form-control" placeholder="Email address" required="">
+                                        <input type="email" name="email" id="email" class="form-control"
+                                            placeholder="Email address">
                                         <label for="email">Email address</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-12">
                                     <div class="form-floating p-0">
                                         <input type="password" name="password" id="password" class="form-control"
-                                            placeholder="Password" required="">
+                                            placeholder="Password">
                                         <label for="password">Password</label>
                                     </div>
                                     <div class="form-check mb-4">
                                         <!-- TERMS -->
-                                        <input class="form-check-input" type="checkbox" name="terms" value=""
+                                        <input class="form-check-input" type="checkbox" name="terms" value="terms"
                                             id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">
                                             I agree to the Terms of Service and Privacy Policy.
@@ -147,7 +147,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-7">
                                         <p class="mb-0">Already have an account?
-                                            <a href="login.html" class="ms-2">Login
+                                            <a href="<?= ROOT ?>/login" class="ms-2">Login
                                             </a>
                                         </p>
                                     </div>

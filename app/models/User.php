@@ -27,6 +27,10 @@ class User
             $this->errors["password"] = "Password is required";
         }
 
+        if (empty($data["terms"])) {
+            $this->errors["terms"] = "Please accept the terms and conditions";
+        }
+
         if (empty($this->errors)){
             return true;
         }

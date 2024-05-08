@@ -127,7 +127,7 @@
                                     <button type="submit" class="form-control">Login</button>
                                 </div>
                                 <div class="col-lg-5 col-12">
-                                    <a href="register.html" class="btn custom-btn custom-border-btn">Register</a>
+                                    <a href="<?= ROOT ?>/register" class="btn custom-btn custom-border-btn">Register</a>
                                 </div>
                             </div>
                         </form>
