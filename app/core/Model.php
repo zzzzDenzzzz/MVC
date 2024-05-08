@@ -63,7 +63,6 @@ trait Model
 
         return false;
     }
-
     public function insert($data)
     {
         if (!empty($this->allowedColumns)) {
