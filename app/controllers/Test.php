@@ -7,15 +7,8 @@ class Test
     public function index()
     {
         $user = new User();
+        $user->insert(["name" => "John", "age" => 63]);
         show($user->findAll());
-        // $arr = [
-        //     "name" => "John",
-        //     "age" => 60
-        // ];
-        $arr['name'] = "John";
-        $arr['age'] = 60;
-        // $result = $user->insert($arr);
-        show($user->where(["id" => 2]));
         $this->view("test");
     }
 }

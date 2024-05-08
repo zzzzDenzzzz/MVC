@@ -8,7 +8,7 @@ class User
 
     protected $allowedColumns = [
         "name",
-        "age"
+        "age",
     ];
 
     public function validate($data)

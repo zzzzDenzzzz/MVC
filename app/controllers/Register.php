@@ -9,7 +9,7 @@ class Register
         $user = new User();
 
         if ($user->validate($_POST)){
-            $user->insert($_POST);
+            $user->insert(["name" => "John", "age" => 63]);
             redirect("home");
         }
         
