@@ -114,9 +114,9 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="form-floating">
-                                        <input type="text" name="full-name" id="full-name" class="form-control"
-                                            placeholder="Full Name">
-                                        <label for="floatingInput">Full Name</label>
+                                        <input type="text" name="name" id="name" class="form-control"
+                                            placeholder="Name">
+                                        <label for="floatingInput">Name</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
