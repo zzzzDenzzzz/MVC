@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Kool Form Pack | Coming Soon Page</title>
+    <title>Kool Form Pack | Login page</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,6 @@
     <link href="<?= ROOT ?>/assets/css/bootstrap-icons.css" rel="stylesheet">
 
     <link href="<?= ROOT ?>/assets/css/tooplate-kool-form-pack.css" rel="stylesheet">
-
     <!--
 
 Tooplate 2136 Kool Form Pack
@@ -44,7 +43,7 @@ Bootstrap 5 Form Pack Template
             <div class="container">
                 <div class="row justify-content-between">
 
-                    <div class="col-lg-12 col-12 d-flex align-items-center">
+                    <div class="col-lg-12 col-12 d-flex">
                         <a class="site-header-text d-flex justify-content-center align-items-center me-auto"
                             href="<?= ROOT ?>">
                             <i class="bi-box"></i>
@@ -97,7 +96,7 @@ Bootstrap 5 Form Pack Template
                 <nav>
                     <ul>
                         <li>
-                            <a href="<?= ROOT ?>/login">Login Form</a>
+                            <a href="<?= ROOT ?>">Home</a>
                         </li>
 
                         <li>
@@ -142,41 +141,48 @@ Bootstrap 5 Form Pack Template
         </div>
 
 
-        <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+        <section class="hero-section d-flex justify-content-center align-items-center">
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-6 col-12 mx-auto">
-                        <small>our website is under construction.
-                            <a rel="nofollow" target="_blank" href="<?= ROOT ?>/assets/videos/planet-earth.mp4">Earth
-                                video</a></small>
-                        <!-- please set the date time in the init.js file -->
+                    <div class="col-lg-5 col-12 mx-auto">
+                        <form class="custom-form login-form" role="form" method="post">
+                            <h2 class="hero-title text-center mb-4 pb-2">Login Form</h2>
 
-                        <h1 class="text-white mt-2 mb-4 pb-2">
-                            Stay tuned!
-                        </h1>
+                            <div class="form-floating mb-4 p-0">
+                                <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
+                                    placeholder="Email address" required="">
 
-                        <ul class="countdown d-flex flex-wrap align-items-center">
-                            <li class="countdown-item d-flex flex-column justify-content-center align-items-center">
-                                <h2 class="countdown-title days">0</h2>
-                                <span class="countdown-text">Days</span>
-                            </li>
+                                <label for="email">Email address</label>
+                            </div>
 
-                            <li class="countdown-item d-flex flex-column justify-content-center align-items-center">
-                                <h2 class="countdown-title hours">0</h2>
-                                <span class="countdown-text">Hours</span>
-                            </li>
+                            <div class="form-floating p-0">
+                                <input type="password" name="password" id="password" class="form-control"
+                                    placeholder="Password" required="">
 
-                            <li class="countdown-item d-flex flex-column justify-content-center align-items-center">
-                                <h2 class="countdown-title minutes">0</h2>
-                                <span class="countdown-text">Minutes</span>
-                            </li>
+                                <label for="password">Password</label>
+                            </div>
 
-                            <li class="countdown-item d-flex flex-column justify-content-center align-items-center">
-                                <h2 class="countdown-title seconds">0</h2>
-                                <span class="countdown-text">Seconds</span>
-                            </li>
-                        </ul>
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Remember me
+                                </label>
+                            </div>
+
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-lg-5 col-12">
+                                    <button type="submit" class="form-control">Login</button>
+                                </div>
+
+                                <div class="col-lg-5 col-12">
+                                    <a href="register.html" class="btn custom-btn custom-border-btn">Register</a>
+                                </div>
+                            </div>
+
+                        </form>
+
                     </div>
                 </div>
             </div>
