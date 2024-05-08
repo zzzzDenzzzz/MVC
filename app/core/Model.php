@@ -1,6 +1,6 @@
 <?php
 
-Trait Model
+trait Model
 {
     use Database;
 
