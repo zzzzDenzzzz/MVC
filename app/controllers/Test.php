@@ -7,7 +7,7 @@ class Test
     public function index()
     {
         $user = new User();
-        $user->insert(["name" => "John", "age" => 63]);
+        $user->insert(["name" => "Олег", "age" => 29]);
         show($user->findAll());
         $this->view("test");
     }

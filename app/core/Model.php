@@ -67,7 +67,7 @@ trait Model
     {
         if (!empty($this->allowedColumns)) {
             foreach ($data as $key => $value) {
-                if (in_array($key, $this->allowedColumns)) {
+                if (!in_array($key, $this->allowedColumns)) {
                     unset($data[$key]);
                 }
             }
@@ -84,7 +84,7 @@ trait Model
     {
         if (!empty($this->allowedColumns)) {
             foreach ($data as $key => $value) {
-                if (in_array($key, $this->allowedColumns)) {
+                if (!in_array($key, $this->allowedColumns)) {
                     unset($data[$key]);
                 }
             }
