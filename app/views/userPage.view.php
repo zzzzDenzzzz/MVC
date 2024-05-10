@@ -32,7 +32,7 @@
                             </span>
                         </a>
                         <ul class="social-icon d-flex justify-content-center align-items-center mx-auto">
-                            <span class="text-white me-4 d-none d-lg-block">Stay connected</span>
+                            <span class="text-white me-4 d-none d-lg-block">Hi, <?= $username ?>!</span>
                             <li class="social-icon-item">
                                 <a href="#" class="social-icon-link bi-instagram"></a>
                             </li>
@@ -99,13 +99,7 @@
         <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-12 mx-auto">
-                        <!-- PHP -->
-                        <h3 class="text-white mt-2 mb-4 pb-2">
-                            Hi, <?= $username ?>!
-                        </h3>
-                        <!-- PHP -->
-                    </div>
+                    <!-- CONTENT -->
                 </div>
             </div>
             <div class="video-wrap">

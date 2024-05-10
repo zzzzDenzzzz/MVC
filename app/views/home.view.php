@@ -31,18 +31,7 @@
                                 Task Manager
                             </span>
                         </a>
-                        <ul class="social-icon d-flex justify-content-center align-items-center mx-auto">
-                            <span class="text-white me-4 d-none d-lg-block">Stay connected</span>
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-instagram"></a>
-                            </li>
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-twitter"></a>
-                            </li>
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-whatsapp"></a>
-                            </li>
-                        </ul>
+                        <span class="text-white me-4 d-none d-lg-block">Hi, <?= $username ?>!</span>
                         <div>
                             <a href="#" class="custom-btn custom-border-btn btn" data-bs-toggle="modal"
                                 data-bs-target="#subscribeModal">Notify me
@@ -111,11 +100,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-12 mx-auto">
-                        <!-- PHP -->
-                        <h3 class="text-white mt-2 mb-4 pb-2">
-                            Hi, <?= $username ?>!
-                        </h3>
-                        <!-- PHP -->
                         <small>our website is under construction.
                             <a rel="nofollow" target="_blank" href="<?= ROOT ?>/assets/videos/planet-earth.mp4">Earth
                                 video
