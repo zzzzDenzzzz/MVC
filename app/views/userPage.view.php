@@ -31,18 +31,7 @@
                                 Task Manager
                             </span>
                         </a>
-                        <ul class="social-icon d-flex justify-content-center align-items-center mx-auto">
-                            <span class="text-white me-4 d-none d-lg-block">Hi, <?= $username ?>!</span>
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-instagram"></a>
-                            </li>
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-twitter"></a>
-                            </li>
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-whatsapp"></a>
-                            </li>
-                        </ul>
+                        <span class="text-white me-4 d-none d-lg-block">Hi, <?= $username ?>!</span>
                         <div>
                             <a href="#" class="custom-btn custom-border-btn btn" data-bs-toggle="modal"
                                 data-bs-target="#subscribeModal">Notify me
