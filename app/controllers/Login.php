@@ -6,6 +6,10 @@ class Login
 
     public function index()
     {
+        if (isset($_SESSION["USER"])) {
+            redirect("userPage");
+        }
+
         $data = [];
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {

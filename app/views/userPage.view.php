@@ -68,9 +68,6 @@
                             <a href="<?= ROOT ?>">Home</a>
                         </li>
                         <li>
-                            <a href="<?= ROOT ?>/contact">Contact Form</a>
-                        </li>
-                        <li>
                             <a href="<?= ROOT ?>/logout">Logout</a>
                         </li>
                     </ul>

@@ -6,7 +6,7 @@ class Admin
     
     public function index()
     {
-        if (empty($_SESSION["USER"])) {
+        if (!isset($_SESSION["USER"])) {
             redirect("404");
         }
 

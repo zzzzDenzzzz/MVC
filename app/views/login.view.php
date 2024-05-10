@@ -70,9 +70,6 @@
                         <li>
                             <a href="<?= ROOT ?>/register">Create an account</a>
                         </li>
-                        <li>
-                            <a href="<?= ROOT ?>/contact">Contact Form</a>
-                        </li>
                         <!-- PHP -->
                         <?php if (isset($_SESSION["USER"])) :?>
                             <li>

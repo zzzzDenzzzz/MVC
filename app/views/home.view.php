@@ -81,9 +81,6 @@
                             </li>
                         <?php endif; ?>
                         <!-- PHP -->
-                        <li>
-                            <a href="<?= ROOT ?>/contact">Contact Form</a>
-                        </li>
                     </ul>
                 </nav>
             </div>
