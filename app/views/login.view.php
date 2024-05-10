@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Kool Form Pack | Login page</title>
+    <title>Login page</title>
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
                             href="<?= ROOT ?>">
                             <i class="bi-box"></i>
                             <span>
-                                Kool Form Pack
+                                Task Manager
                             </span>
                         </a>
                         <ul class="social-icon d-flex justify-content-center align-items-center mx-auto">
@@ -73,6 +73,13 @@
                         <li>
                             <a href="<?= ROOT ?>/contact">Contact Form</a>
                         </li>
+                        <!-- PHP -->
+                        <?php if (isset($_SESSION["USER"])) :?>
+                            <li>
+                                <a href="<?= ROOT ?>/userPage">User Page</a>
+                            </li>
+                        <?php endif; ?>
+                        <!-- PHP -->
                     </ul>
                 </nav>
             </div>

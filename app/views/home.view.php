@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Kool Form Pack | Coming Soon Page</title>
+    <title>Coming Soon Page</title>
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
                             href="<?= ROOT ?>">
                             <i class="bi-box"></i>
                             <span>
-                                Kool Form Pack
+                                Task Manager
                             </span>
                         </a>
                         <ul class="social-icon d-flex justify-content-center align-items-center mx-auto">
@@ -64,17 +64,25 @@
             <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
                 <nav>
                     <ul>
-                        <li>
-                            <a href="<?= ROOT ?>/login">Login Form</a>
-                        </li>
-                        <li>
-                            <a href="<?= ROOT ?>/register">Create an account</a>
-                        </li>
+                        <!-- PHP -->
+                        <?php if (isset($_SESSION["USER"])) :?>
+                            <li>
+                                <a href="<?= ROOT ?>/userPage">User Page</a>
+                            </li>
+                            <li>
+                                <a href="<?= ROOT ?>/logout">Logout</a>
+                            </li>
+                        <?php else :?>
+                            <li>
+                                <a href="<?= ROOT ?>/login">Login Form</a>
+                            </li>
+                            <li>
+                                <a href="<?= ROOT ?>/register">Create an account</a>
+                            </li>
+                        <?php endif; ?>
+                        <!-- PHP -->
                         <li>
                             <a href="<?= ROOT ?>/contact">Contact Form</a>
-                        </li>
-                        <li>
-                            <a href="<?= ROOT ?>/logout">Logout</a>
                         </li>
                     </ul>
                 </nav>
