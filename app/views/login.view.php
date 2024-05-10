@@ -105,6 +105,13 @@
                     <div class="col-lg-5 col-12 mx-auto">
                         <!-- FORM -->
                         <form class="custom-form login-form" role="form" method="post">
+                            <!-- PHP -->
+                            <?php if (!empty($errors)): ?>
+                                <div class="alert alert-danger text-center">
+                                    <?= implode("<br>", $errors) ?>
+                                </div>
+                            <?php endif; ?>
+                            <!-- PHP -->
                             <h2 class="hero-title text-center mb-4 pb-2">Login Form</h2>
                             <div class="form-floating mb-4 p-0">
                                 <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"

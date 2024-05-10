@@ -73,6 +73,9 @@
                         <li>
                             <a href="<?= ROOT ?>/contact">Contact Form</a>
                         </li>
+                        <li>
+                            <a href="<?= ROOT ?>/logout">Logout</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -103,6 +106,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-12 mx-auto">
+                        <!-- PHP -->
+                        <h3 class="text-white mt-2 mb-4 pb-2">
+                            Hi, <?= $username ?>!
+                        </h3>
+                        <!-- PHP -->
                         <small>our website is under construction.
                             <a rel="nofollow" target="_blank" href="<?= ROOT ?>/assets/videos/planet-earth.mp4">Earth
                                 video

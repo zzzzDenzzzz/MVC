@@ -104,12 +104,14 @@
                 <div class="row">
                     <div class="col-lg-6 col-12 mx-auto">
                         <!-- FORM -->
-                        <form class="custom-form" role="form" method="post">    
+                        <form class="custom-form" role="form" method="post">
+                            <!-- PHP -->  
                             <?php if (!empty($errors)): ?>
                                 <div class="alert alert-danger text-center">
                                     <?= implode("<br>", $errors) ?>
                                 </div>
                             <?php endif; ?>
+                            <!-- PHP -->
                             <h2 class="hero-title text-center mb-4 pb-2">Create an account</h2>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">

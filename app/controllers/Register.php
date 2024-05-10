@@ -6,14 +6,19 @@ class Register
 
     public function index()
     {
-        $user = new User();
+        $data = [];
+        
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $user = new User();
 
-        if ($user->validate($_POST)) {
-            $user->insert($_POST);
-            redirect("home");
+            if ($user->validate($_POST)) {
+                $user->insert($_POST);
+                redirect("login");
+            }
+
+            $data['errors'] = $user->errors;
         }
 
-        $data['errors'] = $user->errors;
         $this->view("register", $data);
     }
 }
