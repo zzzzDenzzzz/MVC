@@ -1,9 +1,9 @@
 <?php
 
-function show($stuff)
+function show($data)
 {
     echo "<pre>";
-    var_dump($stuff);
+    print_r($data);
     echo "</pre>";
 }
 

@@ -14,9 +14,13 @@ class AdminPage
         $admin_email = $role->getEmail(ADMIN);
 
         if ($_SESSION["USER"]->email == $admin_email) {
+            $city = new City();
+            $total_city = $city->getCount();
+            $page = $_GET['page'] ?? 1;
+            $pagination = new Pagination($page, PER_PAGE, $total_city);
+            $start = $pagination->get_start();
+            $cities = $city->getCities($start, PER_PAGE);
             
-            $admin = new Admin();
-            show($admin->findAll());
             $this->view("adminPage");
         } else {
             redirect("userPage");

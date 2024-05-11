@@ -6,10 +6,13 @@ class Test
 
     public function index()
     {
-        $role = new Role();
-        $email = $role->getEmail(ADMIN);
-        show($email);
-        show($_SESSION["USER"]->email);
+        $city = new City();
+        $total_city = $city->getCount();
+        $page = $_GET['page'] ?? 1;
+        $pagination = new Pagination($page, PER_PAGE, $total_city);
+        $start = $pagination->get_start();
+        $cities = $city->getCities($start, PER_PAGE);
+
         $this->view("test");
     }
 }

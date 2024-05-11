@@ -6,7 +6,6 @@ if ($_SERVER["SERVER_NAME"] == "mvc") {
     define("DBUSER", "root");
     define("DBPASS", "");
     define("DBDRIVER", "");
-    define("ADMIN", "admin@mail.ru");
 
     define("ROOT", "http://mvc/public");
 } else {
@@ -19,5 +18,7 @@ if ($_SERVER["SERVER_NAME"] == "mvc") {
     define("ROOT", "https://www.mysyte.com");
 }
 
+define("PER_PAGE", 10);
+define("ADMIN", "admin@mail.ru");
 define("APP_NAME", "Population");
 define("DEBUG", true);
