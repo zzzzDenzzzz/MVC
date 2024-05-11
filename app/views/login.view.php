@@ -59,7 +59,7 @@
                             <a href="<?= ROOT ?>/register">Create an account</a>
                         </li>
                         <!-- PHP -->
-                        <?php if (isset($_SESSION["USER"])) :?>
+                        <?php if (isset($_SESSION["USER"])): ?>
                             <li>
                                 <a href="<?= ROOT ?>/userPage">User Page</a>
                             </li>

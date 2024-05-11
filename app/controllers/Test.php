@@ -12,7 +12,8 @@ class Test
         $pagination = new Pagination($page, PER_PAGE, $total_city);
         $start = $pagination->get_start();
         $cities = $city->getCities($start, PER_PAGE);
+        $data = ['cities' => $cities, 'pagination' => $pagination];
 
-        $this->view("test");
+        $this->view("test", $data);
     }
 }
