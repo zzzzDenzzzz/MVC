@@ -10,7 +10,7 @@ class Admin
             redirect("404");
         }
 
-        if ($_SESSION["USER"]->email == "12den24@gmail.com") {
+        if ($_SESSION["USER"]->email == ADMIN) {
             $user = new User();
 
             show($user->findAll());

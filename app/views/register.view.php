@@ -106,14 +106,7 @@
                             <!-- PHP -->
                             <h2 class="hero-title text-center mb-4 pb-2">Create an account</h2>
                             <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <div class="form-floating">
-                                        <input type="text" name="name" id="name" class="form-control"
-                                            placeholder="Name">
-                                        <label for="floatingInput">Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-12">
+                                <div class="col-lg-12 col-md-6 col-12">
                                     <div class="form-floating mb-4 p-0">
                                         <input type="email" name="email" id="email" class="form-control"
                                             placeholder="Email address">

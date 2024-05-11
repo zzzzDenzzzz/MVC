@@ -59,6 +59,13 @@
                         <li>
                             <a href="<?= ROOT ?>/logout">Logout</a>
                         </li>
+                        <!-- PHP -->
+                        <?php if (isset($_SESSION["USER"]) && $_SESSION["USER"]->email === ADMIN) :?>
+                            <li>
+                                <a href="<?= ROOT ?>/admin">Admin</a>
+                            </li>
+                        <?php endif; ?>
+                        <!-- PHP -->
                     </ul>
                 </nav>
             </div>
