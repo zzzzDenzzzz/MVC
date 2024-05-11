@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Coming Soon Page</title>
+    <title>Home Page</title>
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
                             href="<?= ROOT ?>">
                             <i class="bi-box"></i>
                             <span>
-                                Task Manager
+                                <?= APP_NAME ?>
                             </span>
                         </a>
                         <span class="text-white me-4 d-none d-lg-block">Hi, <?= $username ?>!</span>

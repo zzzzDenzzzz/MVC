@@ -28,7 +28,7 @@
                             href="<?= ROOT ?>">
                             <i class="bi-box"></i>
                             <span>
-                                Task Manager
+                                <?= APP_NAME ?>
                             </span>
                         </a>
                         <span class="text-white me-4 d-none d-lg-block">Hi, <?= $username ?>!</span>

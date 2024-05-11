@@ -28,7 +28,7 @@
                             href="<?= ROOT ?>">
                             <i class="bi-box"></i>
                             <span>
-                                Task Manager
+                                <?= APP_NAME ?>
                             </span>
                         </a>
                         <div>
