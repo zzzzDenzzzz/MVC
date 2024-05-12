@@ -17,7 +17,7 @@ class AdminPage
             $city = new City();
             $total_city = $city->getCount();
             $page = $_GET['page'] ?? 1;
-            $pagination = new Pagination((int)$page, PER_PAGE, $total_city);
+            $pagination = new Pagination((int) $page, PER_PAGE, $total_city);
             $start = $pagination->get_start();
             $cities = $city->getCities($start, PER_PAGE);
             $data = ['cities' => $cities, 'pagination' => $pagination];

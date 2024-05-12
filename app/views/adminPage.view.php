@@ -21,7 +21,7 @@
                     city</button>
             </div>
             <div class="table-responsive my-3">
-                <?php require_once "adminPage-content.view.php"?>
+                <?php require_once "adminPage-content.view.php" ?>
             </div>
         </div>
         <!-- Modal -->
@@ -33,11 +33,25 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <form method="post" id="addCityForm">
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="addName" class="form-label">Name</label>
+                                    <input type="text" name="name" class="form-control" id="addName"
+                                        placeholder="City name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="addPopulation" class="form-label">Population</label>
+                                    <input type="number" name="population" class="form-control" id="addPopulation"
+                                        placeholder="City population">
+                                    <input type="hidden" name="addCity">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" id="btn-add-submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -62,6 +76,7 @@
         </div>
     </div>
     <script src="<?= ROOT ?>/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="<?= ROOT ?>/assets/js/admin.js"></script>
 </body>
 

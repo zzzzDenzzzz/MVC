@@ -19,3 +19,12 @@ if (isset($data["page"])) {
     require_once "../views/adminPage-content.view.php";
     die;
 }
+
+if (isset($_POST["addCity"])) {
+    $data = $_POST;
+    $city = new City();
+    $city->insert(["name" => $data["name"], "population" => $data["population"]]);
+    $res = ["answer" => "success"];
+    echo json_encode($res);
+    die;
+}
