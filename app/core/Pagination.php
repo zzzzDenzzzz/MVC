@@ -71,34 +71,34 @@ class Pagination
         $pages_right = '';
 
         if ($this->current_page > 1) {
-            $back = "<li class='page-item'><a class='page-link' data-page='" . $this->current_page - 1 . "' href='" . $this->get_link($this->current_page - 1) . "'>&lt;</a></li>";
+            $back = "<li class='page-item'><a class='page-link bg-transparent text-white' data-page='" . $this->current_page - 1 . "' href='" . $this->get_link($this->current_page - 1) . "'>&lt;</a></li>";
         }
 
         if ($this->current_page < $this->count_pages) {
-            $forward = "<li class='page-item'><a class='page-link' data-page='" . $this->current_page + 1 . "' href='" . $this->get_link($this->current_page + 1) . "'>&gt;</a></li>";
+            $forward = "<li class='page-item'><a class='page-link bg-transparent text-white' data-page='" . $this->current_page + 1 . "' href='" . $this->get_link($this->current_page + 1) . "'>&gt;</a></li>";
         }
 
         if ($this->current_page > $this->mid_size + 1) {
-            $start_page = "<li class='page-item'><a class='page-link' data-page='1' href='" . $this->get_link(1) . "'>&laquo;</a></li>";
+            $start_page = "<li class='page-item'><a class='page-link bg-transparent text-white' data-page='1' href='" . $this->get_link(1) . "'>&laquo;</a></li>";
         }
 
         if ($this->current_page < ($this->count_pages - $this->mid_size)) {
-            $end_page = "<li class='page-item'><a class='page-link' data-page='" . $this->count_pages . "' href='" . $this->get_link($this->count_pages) . "'>&raquo;</a></li>";
+            $end_page = "<li class='page-item'><a class='page-link bg-transparent text-white' data-page='" . $this->count_pages . "' href='" . $this->get_link($this->count_pages) . "'>&raquo;</a></li>";
         }
 
         for ($i = $this->mid_size; $i > 0; $i--) {
             if ($this->current_page - $i > 0) {
-                $pages_left .= "<li class='page-item'><a class='page-link' data-page='" . $this->current_page - $i . "' href='" . $this->get_link($this->current_page - $i) . "'>" . ($this->current_page - $i) . "</a></li>";
+                $pages_left .= "<li class='page-item'><a class='page-link bg-transparent text-white' data-page='" . $this->current_page - $i . "' href='" . $this->get_link($this->current_page - $i) . "'>" . ($this->current_page - $i) . "</a></li>";
             }
         }
 
         for ($i = 1; $i <= $this->mid_size; $i++) {
             if ($this->current_page + $i <= $this->count_pages) {
-                $pages_right .= "<li class='page-item'><a class='page-link' data-page='" . $this->current_page + $i . "' href='" . $this->get_link($this->current_page + $i) . "'>" . ($this->current_page + $i) . "</a></li>";
+                $pages_right .= "<li class='page-item'><a class='page-link bg-transparent text-white' data-page='" . $this->current_page + $i . "' href='" . $this->get_link($this->current_page + $i) . "'>" . ($this->current_page + $i) . "</a></li>";
             }
         }
 
-        return '<nav aria-label="Page navigation example"><ul class="pagination">' . $start_page . $back . $pages_left . '<li class="page-item active"><a class="page-link">' . $this->current_page . '</a></li>' . $pages_right . $forward . $end_page . '</ul></nav>';
+        return '<nav aria-label="Page navigation example"><ul class="pagination">' . $start_page . $back . $pages_left . '<li class="page-item active"><a class="page-link bg-transparent text-white">' . $this->current_page . '</a></li>' . $pages_right . $forward . $end_page . '</ul></nav>';
 
     }
 
