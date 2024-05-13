@@ -16,6 +16,7 @@ divTable.addEventListener("click", (e) => {
   }
 });
 
+// Add city
 addCityForm = document.getElementById("addCityForm");
 btnAddSubmit = document.getElementById("btn-add-submit");
 
@@ -30,17 +31,17 @@ addCityForm.addEventListener("submit", (e) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Your work has been saved",
-        showConfirmButton: false,
-        timer: 1500
-      });
-      if (data.answer == "success") {
-        addCityForm.reset();
-      }
-      btnAddSubmit.textContent = "Save";
-      btnAddSubmit.disabled = false;
+      setTimeout(() => {
+        Swal.fire({
+          icon: data.answer,
+          title: data.answer,
+          html: data?.errors,
+        });
+        if (data.answer === "success") {
+          addCityForm.reset();
+        }
+        btnAddSubmit.textContent = "Save";
+        btnAddSubmit.disabled = false;
+      }, 1000);
     });
 });
