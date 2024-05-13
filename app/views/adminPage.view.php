@@ -78,6 +78,7 @@
     <script src="<?= ROOT ?>/assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="<?= ROOT ?>/assets/js/admin.js"></script>
+    <script src="<?= ROOT ?>/assets/js/add-city.js"></script>
 </body>
 
 </html>
