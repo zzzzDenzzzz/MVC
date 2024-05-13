@@ -48,14 +48,14 @@
                 <nav>
                     <ul>
                         <!-- PHP -->
-                        <?php if (isset($data["user"])) :?>
+                        <?php if (isset($data["user"])): ?>
                             <li>
                                 <a href="<?= ROOT ?>/userPage">User Page</a>
                             </li>
                             <li>
                                 <a href="<?= ROOT ?>/logout">Logout</a>
                             </li>
-                        <?php else :?>
+                        <?php else: ?>
                             <li>
                                 <a href="<?= ROOT ?>/login">Login Form</a>
                             </li>
@@ -72,14 +72,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-12 mx-auto">
-                        <small>our website is under construction.
-                            <a rel="nofollow" target="_blank" href="<?= ROOT ?>/assets/videos/planet-earth.mp4">Earth
-                                video
+                        <small>
+                            <a rel="nofollow" target="_blank" href="<?= ROOT ?>/assets/videos/planet-earth.mp4">just a video
                             </a>
                         </small>
                         <h1 class="text-white mt-2 mb-4 pb-2">
-                            Stay tuned!
+                            Find out the population of your city
                         </h1>
+                        <h3 class="text-white mt-2 mb-4 pb-2">
+                            The site will be updated in...
+                        </h3>
                         <ul class="countdown d-flex flex-wrap align-items-center">
                             <li class="countdown-item d-flex flex-column justify-content-center align-items-center">
                                 <h2 class="countdown-title days">0</h2>
