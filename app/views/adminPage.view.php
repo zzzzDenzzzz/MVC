@@ -34,7 +34,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center h2 my-3"><a href="<?= ROOT ?>/userPage">User Page</a></h1>
+                <h1 class="text-center h2 my-3"><a href="<?= ROOT ?>/userPage">To User Page</a></h1>
             </div>
         </div>
         <div class="row">
@@ -47,7 +47,9 @@
                     <div class="col-md-6">
                         <div class="input-group mb-3">
                             <input type="text" id="search" class="form-control" placeholder="Search...">
-                            <span class="input-group-text" id="clear-search">&times;</span>
+                            <span class="input-group-text bg-transparent text-white" id="clear-search">
+                                <a href="<?= ROOT ?>/adminPage">&times;</a>
+                            </span>
                         </div>
                     </div>
                 </div>

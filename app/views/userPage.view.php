@@ -55,8 +55,11 @@
                         <span class="text-white me-4 d-none d-lg-block">Hi, <?= $username ?>!</span>
                         <span>
                             <div class="input-group mb-3">
-                                <input type="text" id="search" class="form-control" placeholder="Search...">
-                                <span class="input-group-text" id="clear-search">&times;</span>
+                                <input type="text" id="search" class="form-control bg-transparent text-white"
+                                    placeholder="Search...">
+                                <span class="input-group-text bg-transparent text-white" id="clear-search">
+                                    <a href="<?= ROOT ?>/userPage">&times;</a>
+                                </span>
                             </div>
                         </span>
                         <a class="bi-list offcanvas-icon" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button"
@@ -81,7 +84,7 @@
                             <a href="<?= ROOT ?>/logout">Logout</a>
                         </li>
                         <!-- PHP -->
-                        <?php if (isset($_SESSION["USER"]) && $_SESSION["USER"]->email === ADMIN): ?>
+                        <?php if (isset($data["user"]) && $data["user"] == "admin"): ?>
                             <li>
                                 <a href="<?= ROOT ?>/adminPage">Admin</a>
                             </li>

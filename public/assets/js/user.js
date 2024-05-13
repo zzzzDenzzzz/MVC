@@ -39,16 +39,3 @@ sField.addEventListener("input", (e) => {
       });
   }
 });
-
-// Clear search
-document.getElementById("clear-search").addEventListener("click", () => {
-  sField.value = "";
-  fetch("../../app/core/Action.php", {
-    method: "POST",
-    body: JSON.stringify({ page: 1 }),
-  })
-    .then((response) => response.text())
-    .then((data) => {
-      divTable.innerHTML = data;
-    });
-});

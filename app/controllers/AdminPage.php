@@ -20,7 +20,7 @@ class AdminPage
             $pagination = new Pagination((int) $page, PER_PAGE, $total_city);
             $start = $pagination->get_start();
             $cities = $city->getCities($start, PER_PAGE);
-            $data = ['cities' => $cities, 'pagination' => $pagination];
+            $data = ['cities' => $cities, 'pagination' => $pagination, "user" => "admin"];
             
             $this->view("adminPage", $data);
         } else {

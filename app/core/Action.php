@@ -16,7 +16,7 @@ if (isset($data['search'])) {
     $search = trim($data['search']);
     $city = new City();
     $search_cities = $city->searchCities($search);
-    $data = ["search_cities" => $search_cities];
+    $data += ["search_cities" => $search_cities];
     require_once "../views/search.view.php";
     die;
 }
@@ -29,8 +29,12 @@ if (isset($data["page"])) {
     $pagination = new Pagination((int) $page, PER_PAGE, $total_city);
     $start = $pagination->get_start();
     $cities = $city->getCities($start, PER_PAGE);
-    $data = ['cities' => $cities, 'pagination' => $pagination];
-    require_once "../views/adminPage-content.view.php";
+    $data += ['cities' => $cities, 'pagination' => $pagination];
+    if (isset($data["user"]) && $data["user"] === "admin") {
+        require_once "../views/adminPage-content.view.php";
+    } else {
+        require_once "../views/userPage-content.view.php";
+    }
     die;
 }
 

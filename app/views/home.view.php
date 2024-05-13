@@ -48,7 +48,7 @@
                 <nav>
                     <ul>
                         <!-- PHP -->
-                        <?php if (isset($_SESSION["USER"])) :?>
+                        <?php if (isset($data["user"])) :?>
                             <li>
                                 <a href="<?= ROOT ?>/userPage">User Page</a>
                             </li>

@@ -6,10 +6,7 @@
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Population</th>
-                <?php if (isset($_SESSION["USER"]) && $_SESSION["USER"]->email === ADMIN): ?>
-                    <th scope="col">Actions</th>
-                <?php endif; ?>
-
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -18,13 +15,11 @@
                     <th scope="row" class="text-white"><?= $city->id ?></th>
                     <td class="name text-white"><?= $city->name ?></td>
                     <td class="population text-white"><?= $city->population ?></td>
-                    <?php if (isset($_SESSION["USER"]) && $_SESSION["USER"]->email === ADMIN): ?>
-                        <td>
-                            <button class="btn btn-info btn-edit" data-id="<?= $city->id ?>" data-bs-toggle="modal"
-                                data-bs-target="#editCity">Edit</button>
-                            <button class="btn btn-danger btn-delete" data-id="<?= $city->id ?>">Delete</button>
-                        </td>
-                    <?php endif; ?>
+                    <td>
+                        <button class="btn btn-info btn-edit" data-id="<?= $city->id ?>" data-bs-toggle="modal"
+                            data-bs-target="#editCity">Edit</button>
+                        <button class="btn btn-danger btn-delete" data-id="<?= $city->id ?>">Delete</button>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
