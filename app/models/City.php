@@ -24,4 +24,11 @@ class City
 
         return $this->query($query);
     }
+
+    function searchCities($search)
+    {
+        $query = "SELECT * FROM $this->table WHERE name LIKE '%{$search}%'";
+
+        return $this->query($query);
+    }
 }

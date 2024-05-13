@@ -5,6 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="<?= ROOT ?>/assets/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #loader {
+            background: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            position: absolute;
+            top: 150px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            display: none;
+        }
+
+        #loader img {
+            width: 100px;
+        }
+
+        #clear-search {
+            cursor: pointer;
+        }
+    </style>
     <title>Admin Page</title>
 </head>
 
@@ -17,8 +38,21 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <button class="btn btn-primary btn-add" data-bs-toggle="modal" data-bs-target="#addCity">Add
-                    city</button>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn btn-primary btn-add" data-bs-toggle="modal" data-bs-target="#addCity">Add
+                            city</button>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group mb-3">
+                            <input type="text" id="search" class="form-control" placeholder="Search...">
+                            <span class="input-group-text" id="clear-search">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="loader">
+                <img src="<?= ROOT ?>/assets/images/ripple.svg" alt="">
             </div>
             <div class="table-responsive my-3">
                 <?php require_once "adminPage-content.view.php" ?>
@@ -93,6 +127,7 @@
     <script src="<?= ROOT ?>/assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="<?= ROOT ?>/assets/js/admin.js"></script>
+    <script src="<?= ROOT ?>/assets/js/mark.min.js"></script>
 </body>
 
 </html>

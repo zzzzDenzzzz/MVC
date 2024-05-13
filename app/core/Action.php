@@ -11,6 +11,17 @@ require_once "../controllers/EditCity.php";
 
 $data = json_decode(file_get_contents("php://input"), true);
 
+// Search
+if (isset($data['search'])) {
+    $search = trim($data['search']);
+    $city = new City();
+    $search_cities = $city->searchCities($search);
+    $data = ["search_cities" => $search_cities];
+    require_once "../views/search.view.php";
+    die;
+}
+
+// Pagination
 if (isset($data["page"])) {
     $page = $data["page"];
     $city = new City();
