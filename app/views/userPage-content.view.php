@@ -11,9 +11,9 @@
         <tbody>
             <?php foreach ($data['cities'] as $city): ?>
                 <tr id="city-<?= $city->id ?>">
-                    <th scope="row"><?= $city->id ?></th>
-                    <td class="name"><?= $city->name ?></td>
-                    <td class="population"><?= $city->population ?></td>
+                    <th scope="row" class="text-white"><?= $city->id ?></th>
+                    <td class="name text-white"><?= $city->name ?></td>
+                    <td class="population text-white"><?= $city->population ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
