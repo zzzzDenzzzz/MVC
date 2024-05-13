@@ -2,7 +2,7 @@
 
 require_once "../core/Action.php";
 
-if (isset($_POST['addCity'])) {
+if (isset($_POST['editCity'])) {
     $data = $_POST;
     $validator = new Validator();
     $validation = $validator->validate($data, [
@@ -11,7 +11,10 @@ if (isset($_POST['addCity'])) {
         ],
         'population' => [
             'minNum' => 1,
-        ]
+        ],
+        'id' => [
+            'minNum' => 1,
+        ],
     ]);
     if ($validation->hasErrors()) {
         $errors = '<ul class="list-unstyled text-start text-danger">';
@@ -24,7 +27,7 @@ if (isset($_POST['addCity'])) {
         $res = ['answer' => 'error', 'errors' => $errors];
     } else {
         $city = new City();
-        $city->insert(["name" => $data["name"], "population" => $data["population"]]);
+        $city->update($data["id"], ["name" => $data["name"], "population" => $data["population"]]);
         $res = ["answer" => "success"];
     }
     echo json_encode($res);

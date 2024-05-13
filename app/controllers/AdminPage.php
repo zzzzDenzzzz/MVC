@@ -21,7 +21,7 @@ class AdminPage
             $start = $pagination->get_start();
             $cities = $city->getCities($start, PER_PAGE);
             $data = ['cities' => $cities, 'pagination' => $pagination];
-
+            
             $this->view("adminPage", $data);
         } else {
             redirect("userPage");
