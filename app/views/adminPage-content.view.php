@@ -18,7 +18,7 @@
                     <td>
                         <button class="btn btn-info btn-edit" data-id="<?= $city->id ?>" data-bs-toggle="modal"
                             data-bs-target="#editCity">Edit</button>
-                        <button class="btn btn-danger btn-delete" data-id="<?php $city->id ?>">Delete</button>
+                        <button class="btn btn-danger btn-delete" data-id="<?= $city->id ?>">Delete</button>
                     </td>
                 </tr>
             <?php endforeach; ?>

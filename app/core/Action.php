@@ -23,12 +23,27 @@ if (isset($data["page"])) {
     die;
 }
 
+// Get
 if (isset($data['action']) && $data['action'] == 'get_city') {
     $id = isset($data['id']) ? (int) $data['id'] : 0;
     $city = new City();
     $result = $city->first(["id" => $id]);
     if ($result) {
         $res = ['answer' => 'success', 'city' => $result];
+    } else {
+        $res = ['answer' => 'error',];
+    }
+    echo json_encode($res);
+    die;
+}
+
+// Delete
+if (isset($data['action']) && $data['action'] == 'delete_city') {
+    $id = isset($data['id']) ? (int) $data['id'] : 0;
+    $city = new City();
+    $result = $city->delete($id);
+    if ($result) {
+        $res = ['answer' => 'success',];
     } else {
         $res = ['answer' => 'error',];
     }

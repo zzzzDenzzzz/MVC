@@ -111,6 +111,6 @@ trait Model
         $query = "DELETE FROM $this->table WHERE $id_column = :$id_column";
         $this->query($query, $data);
 
-        return false;
+        return true;
     }
 }
