@@ -32,12 +32,6 @@
                             </span>
                         </a>
                         <span class="text-white me-4 d-none d-lg-block">Hi, <?= $username ?>!</span>
-                        <div>
-                            <a href="#" class="custom-btn custom-border-btn btn" data-bs-toggle="modal"
-                                data-bs-target="#subscribeModal">Notify me
-                                <i class="bi-arrow-right ms-2"></i>
-                            </a>
-                        </div>
                         <a class="bi-list offcanvas-icon" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button"
                             aria-controls="offcanvasMenu">
                         </a>
@@ -72,28 +66,6 @@
                         <!-- PHP -->
                     </ul>
                 </nav>
-            </div>
-        </div>
-        <!-- Modal -->
-        <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="#" method="get" class="custom-form mt-lg-4 mt-2" role="form">
-                            <h2 class="modal-title" id="subscribeModalLabel">Stay up to date</h2>
-                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
-                                placeholder="your@email.com" required="">
-                            <button type="submit" class="form-control">Notify</button>
-                        </form>
-                    </div>
-                    <div class="modal-footer justify-content-center">
-                        <p>By signing up, you agree to our Privacy Notice</p>
-                    </div>
-                </div>
             </div>
         </div>
         <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
